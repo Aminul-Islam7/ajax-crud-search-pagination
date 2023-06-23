@@ -29,6 +29,23 @@
             $('#addModal').modal('hide');
             $('#addProductForm')[0].reset();
             $('.table').load(location.href+' .table');
+            Command: toastr["success"]("Product Added!", "Success")
+            toastr.options = {
+              "closeButton": true,
+              "debug": false,
+              "newestOnTop": false,
+              "progressBar": true,
+              "positionClass": "toast-bottom-left",
+              "preventDuplicates": false,
+              "showDuration": "300",
+              "hideDuration": "1000",
+              "timeOut": "6000",
+              "extendedTimeOut": "1000",
+              "showEasing": "swing",
+              "hideEasing": "linear",
+              "showMethod": "fadeIn",
+              "hideMethod": "fadeOut"
+            }
           }
         },
         error:function(err){
@@ -68,6 +85,23 @@
             $('#updateModal').modal('hide');
             $('#updateProductForm')[0].reset();
             $('.table').load(location.href+' .table');
+            Command: toastr["success"]("Product Updated!", "Success")
+            toastr.options = {
+              "closeButton": true,
+              "debug": false,
+              "newestOnTop": false,
+              "progressBar": true,
+              "positionClass": "toast-bottom-left",
+              "preventDuplicates": false,
+              "showDuration": "300",
+              "hideDuration": "1000",
+              "timeOut": "6000",
+              "extendedTimeOut": "1000",
+              "showEasing": "swing",
+              "hideEasing": "linear",
+              "showMethod": "fadeIn",
+              "hideMethod": "fadeOut"
+            }
           }
         },
         error:function(err){
@@ -92,6 +126,23 @@
           success:function(res){
             if(res.status == 'success') {
               $('.table').load(location.href+' .table');
+              Command: toastr["success"]("Product Deleted!", "Success")
+              toastr.options = {
+                "closeButton": true,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": true,
+                "positionClass": "toast-bottom-left",
+                "preventDuplicates": false,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "6000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+              }
             }
           }
         });
@@ -99,3 +150,5 @@
     })
   });
 </script>
+
+<script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
