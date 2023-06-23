@@ -44,9 +44,8 @@
 							<td>{{ $product->name }}</td>
 							<td>{{ $product->price }}</td>
 							<td>
-								<a
+								<a href=""
 									class="btn btn-success update_product_form"
-									href=""
 									data-bs-toggle="modal"
 									data-bs-target="#updateModal"
 									data-id="{{ $product->id }}"
@@ -55,7 +54,12 @@
 								>
 									<i class="fa-solid fa-pen-to-square"></i>
 								</a>
-								<a class="btn btn-danger" href=""><i class="fa-solid fa-trash"></i></a>
+								<a href=""
+									class="btn btn-danger"
+									data-id="{{ $product->id }}"
+								>
+									<i class="fa-solid fa-trash"></i>
+								</a>
 							</td>
 						</tr>
 						@endforeach

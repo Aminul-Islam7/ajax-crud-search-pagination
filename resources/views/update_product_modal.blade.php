@@ -15,11 +15,11 @@
           </div>
           <div class="form-group">
             <label for="name">Product Name</label>
-            <input type="text" class="form-control" id="up_name" name="name">
+            <input type="text" class="form-control" id="up_name" name="up_name">
           </div>
           <div class="form-group mt-2">
             <label for="price">Product Price</label>
-            <input type="number" class="form-control" id="up_price" name="price">
+            <input type="number" class="form-control" id="up_price" name="up_price">
           </div>
         </div>
         <div class="modal-footer">
