@@ -44,7 +44,17 @@
 							<td>{{ $product->name }}</td>
 							<td>{{ $product->price }}</td>
 							<td>
-								<a class="btn btn-success" href=""><i class="fa-solid fa-pen-to-square"></i></a>
+								<a
+									class="btn btn-success update_product_form"
+									href=""
+									data-bs-toggle="modal"
+									data-bs-target="#updateModal"
+									data-id="{{ $product->id }}"
+									data-name="{{ $product->name }}"
+									data-price="{{ $product->price }}"
+								>
+									<i class="fa-solid fa-pen-to-square"></i>
+								</a>
 								<a class="btn btn-danger" href=""><i class="fa-solid fa-trash"></i></a>
 							</td>
 						</tr>
@@ -57,6 +67,7 @@
 	</div>
 
 	@include('add_product_modal')
+	@include('update_product_modal')
 	@include('product_js')
 
 </body>
