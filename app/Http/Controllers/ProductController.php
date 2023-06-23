@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
     public function products() {
-        return view('products');
+        $products = Product::latest()->paginate(5);
+
+        return view('products', compact('products'));
     }
 
     // Add Product
@@ -23,5 +26,14 @@ class ProductController extends Controller
             'price.required' => 'Price is required',
         ]
         );
+
+        $product = new Product();
+        $product->name = $request->name;
+        $product->price = $request->price;
+        $product->save();
+
+        return response()->json([
+            'status' => 'success',
+        ]);
     }
 }
